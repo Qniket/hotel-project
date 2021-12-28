@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+
+	table,th,td {
+		border: 1px solid black;
+	}
+	.button{
+		background-color: #008CBA;
+		font-size: 16px;
+		color: white;
+		cursor: pointer;
+	}
+	table{
+		text-align: left;
+		width: 90%;
+	}
+	.table2{
+		width: 20%;
+	}
+</style>
+</head>
+
+<script type="text/javascript" src="angular.min.js"></script>
+<body align="center">
+	
+	<div ng-app="" ng-init="fname='',lname='',aname='',pname=''">
+
+<h2>CHECKOUT</h2>
+<p><b><i>Item:</i></b><br> <input type="text" ng-model="iname"></p>
+<p><b><i>Extra(s):</i></b><br> <input type="text" ng-model="addname"></p>
+<p><b><i>First Name:</i></b><br> <input type="text" ng-model="fname"></p>
+<p><b><i>Last Name: </i></b><br><input type="text" ng-model="lname"></p>
+<p><b><i>Email id:</i></b><br> <input type="text" ng-model="ename"></p>
+<p><b><i>CVV:</i></b><br> <input type="number" ng-model="vname"></p>
+<p><b><i>Address:</i></b><br> <input type="text" ng-model="aname"></p>
+<p><b><i>Pincode:</i></b> <br><input type="text" ng-model="pname"></p>
+
+
+<br>
+<br>
+<table align="center">
+
+	<tr>
+		<th> No. </th>
+		<th>ITEM NAME</th>
+		<th>ADD ONS</th>
+		<th>CUSTOMER NAME</th>
+		<th>EMAL ID</th>
+		<th>CVV</th>
+		<th>CUSTOMER ADDRESS</th>
+		<th>CUSTOMER PINCODE</th>
+	</tr>
+	<tr>
+		<td>615</td>
+		<td>{{iname}}</td>
+		<td>{{addname}}</td>
+		<td>{{fname}} {{lname}}</td>
+		<td>{{ename}}</td>
+		<td>{{vname}}</td>
+		<td>{{aname}}</td>
+		<td>{{pname}}</td>
+		<td><input type="checkbox" ng-model="myVar"></td>
+	</tr>
+	
+</table>
+
+
+<div ng-show="myVar">
+<br>
+<table align="center" class="table2">
+<tr>
+    <th>Item Name:</th>
+    <td>{{iname}}</td>
+      </tr>
+  <tr>
+     <th>Adds:</th>
+     <td>{{addname}}</td>
+  </tr>
+  <tr>
+     <th>Quantity:</th>
+     <td>1</td>
+  </tr>
+  <tr>
+     <th>Rate:</th>
+     <td>₹500</td>
+  </tr>
+  <tr>
+     <th><b>Total:</b></th>
+     <td>₹500</td>
+  </tr>
+  <tr>
+     <th><B>C G S T </B></th>
+     <td>28.48</td>
+  </tr>
+  <tr>
+     <th><B>S G S T </B></th>
+     <td>28.48</td>
+  </tr>
+  <tr>
+     <th><b>Net Amount</b></th>
+     <td><b>₹556.96</b></td>
+  </tr>
+
+  </table>
+  <br>
+  
+
+<a href="../end/end.html"><input type="button" button class="button" value="Place Order">
+
+</div>
+
+</div>
+</body>
+
+
+</html>
