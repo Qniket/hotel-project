@@ -162,7 +162,7 @@ return false;
 else
 {
 alert('Form Successfully Submitted');
-setTimeout(function(){window.location="../home/home.html"});
+setTimeout(function(){window.location="./home/home.html"});
 return true;}
 }
 
